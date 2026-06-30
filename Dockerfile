@@ -3,14 +3,14 @@ FROM maven:3.9.9-eclipse-temurin-21 AS builder
 
 WORKDIR /app
 
-# Copy pom.xml first for dependency caching
-COPY pom.xml .
+# Copy pom.xml from backend first for dependency caching
+COPY backend/pom.xml .
 
 # Download dependencies
 RUN mvn dependency:go-offline
 
-# Copy source code
-COPY src ./src
+# Copy source code from backend
+COPY backend/src ./src
 
 # Build the application
 RUN mvn clean package -DskipTests

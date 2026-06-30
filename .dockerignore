@@ -1,0 +1,11 @@
+# Ignore build outputs and frontend directory for backend docker context
+backend/target
+frontend
+**/node_modules
+.git
+.idea
+.vscode
+*.iml
+README.md
+Dockerfile
+.dockerignore
