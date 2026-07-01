@@ -34,7 +34,7 @@ export default function App() {
       console.error(err);
       setError(
         err.response?.data?.message || 
-        "Could not connect to the backend server. Make sure it's running on http://localhost:8080 and that your GEMINI_API_KEY is set."
+        "Could not connect to the backend server. Make sure it's running."
       );
     } finally {
       setLoading(false);
